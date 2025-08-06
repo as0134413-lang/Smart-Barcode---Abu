@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>وسائل التواصل الاجتماعي</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+        
+        .social-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .social-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .social-image {
+            height: 200px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .social-card:hover .social-image img {
+            transform: scale(1.05);
+        }
+        
+        .social-content {
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .social-icon {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 30px;
+        }
+        
+        .social-content h3 {
+            margin-top: 30px;
+            margin-bottom: 15px;
+            color: #333;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .social-content p {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .social-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 50px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Platform Specific Styling */
+        .facebook {
+            border-top: 5px solid #1877F2;
+        }
+        
+        .facebook .social-icon {
+            color: #1877F2;
+        }
+        
+        .facebook .social-btn {
+            background: #1877F2;
+        }
+        
+        .whatsapp {
+            border-top: 5px solid #25D366;
+        }
+        
+        .whatsapp .social-icon {
+            color: #25D366;
+        }
+        
+        .whatsapp .social-btn {
+            background: #25D366;
+        }
+        
+        .twitter {
+            border-top: 5px solid #1DA1F2;
+        }
+        
+        .twitter .social-icon {
+            color: #1DA1F2;
+        }
+        
+        .twitter .social-btn {
+            background: #1DA1F2;
+        }
+        
+        .instagram {
+            border-top: 5px solid #E1306C;
+        }
+        
+        .instagram .social-icon {
+            color: #E1306C;
+        }
+        
+        .instagram .social-btn {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+        }
+        
+        .telegram {
+            border-top: 5px solid #0088CC;
+        }
+        
+        .telegram .social-icon {
+            color: #0088CC;
+        }
+        
+        .telegram .social-btn {
+            background: #0088CC;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Facebook Card -->
+        <div class="social-card facebook">
+            <div class="social-image">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/89ee2811-fc3a-438d-8bf3-ac8c7880a5a9.png" alt="مجموعة من الأشخاص يتفاعلون مع منشور على فيسبوك في مقهى عصري">
+            </div>
+            <div class="social-content">
+                <div class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <h3>فيسبوك</h3>
+                <p>تواصل مع الأصدقاء والعائلة وشارك حياتك مع الآخرين</p>
+                <a href="#" class="social-btn">انضم إلينا</a>
+            </div>
+        </div>
+        
+        <!-- WhatsApp Card -->
+        <div class="social-card whatsapp">
+            <div class="social-image">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/55210dde-a459-40f3-8b0e-f851ab97febc.png" alt="هاتف ذكي يعرض شات واتساب مع فقاعات رسائل خضراء على خلفية خشبية">
+            </div>
+            <div class="social-content">
+                <div class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>واتساب</h3>
+                <p>تواصل فوري مع الأصدقاء والعائلة عبر الرسائل والمكالمات</p>
+                <a href="#" class="social-btn">تواصل الآن</a>
+            </div>
+        </div>
+        
+        <!-- Twitter Card -->
+        <div class="social-card twitter">
+            <div class="social-image">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/d4324e78-a117-4662-a9ad-22a1e5474827.png" alt="شاشة حاسوب تعرض واجهة تويتر مع تغريدات حديثة في مؤتمر تقني">
+            </div>
+            <div class="social-content">
+                <div class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <h3>تويتر</h3>
+                <p>شارك أفكارك وكن على اطلاع بآخر الأخبار والتحديثات</p>
+                <a href="#" class="social-btn">تابعنا</a>
+            </div>
+        </div>
+        
+        <!-- Instagram Card -->
+        <div class="social-card instagram">
+            <div class="social-image">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/9fdb50b8-e1e2-457b-bc52-96b95a2ff0e6.png" alt="مصور يلتقط صورة لطعام شهي في مطعم راقٍ باستخدام هاتف ذكي">
+            </div>
+            <div class="social-content">
+                <div class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <h3>إنستغرام</h3>
+                <p>شارك لحظاتك الخاصة عبر الصور والفيديوهات القصيرة</p>
+                <a href="#" class="social-btn">اعرض إبداعك</a>
+            </div>
+        </div>
+        
+        <!-- Telegram Card -->
+        <div class="social-card telegram">
+            <div class="social-image">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/a948be2b-f546-43b5-ad3a-2cddc77a189c.png" alt="مجموعة من الرموز التعبيرية والرسائل في دردشة تلجرام على خلفية زرقاء">
+            </div>
+            <div class="social-content">
+                <div class="social-icon">
+                    <i class="fab fa-telegram-plane"></i>
+                </div>
+                <h3>تلجرام</h3>
+                <p>رسائل فائقة السرية ومجموعات دردشة كبيرة بدون حدود</p>
+                <a href="#" class="social-btn">انضم إلى القناة</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Add animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.social-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            cards.forEach((card, index) => {
+                card.style.opacity = 0;
+                card.style.transform = 'translateY(50px)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+            
+            // Add smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
